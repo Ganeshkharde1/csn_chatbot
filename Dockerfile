@@ -10,7 +10,9 @@ WORKDIR /app
 
 # Copy the local project files into the container
 COPY . ./
-
+COPY text_chunks.pkl /app/text_chunks.pkl
+COPY tfidf_vectors.pkl /app/tfidf_vectors.pkl
+COPY vectorizer.pkl /app/vectorizer.pkl
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
